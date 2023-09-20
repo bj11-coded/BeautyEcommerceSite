@@ -1,0 +1,75 @@
+<%-include('./includes/header') %>
+<%-include('./includes/navbar') %>
+
+<% var sum = 0; %>
+<% for(let cartInf of prod) { %>
+<% sum = (sum + cartInf.productPrice) %> 
+<% } %>
+
+
+
+<!-- Shopping Cart Section Begin -->
+<section class="shopping-cart spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="cart-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Image</th>
+                                <th class="p-name">Product Name</th>
+                                <th>Price</th>
+                                <!-- <th>Quantity</th> -->
+                                <th>Total</th>
+                                <th><i class="ti-close"></i></th>
+                            </tr>
+                        </thead>
+                        <% for(let cartInf of prod) { %>
+                        <tbody>
+                            
+                            <tr>
+                                <td class="cart-pic first-row"><img src="<%= cartInf.productImage %>" alt=""></td>
+                                <td class="cart-title first-row">
+                                    <h5><%= cartInf.productName %></h5>
+                                </td>
+                                <td class="p-price first-row"><%=cartInf.productPrice %></td>
+                                <!-- <td class="qua-col first-row">
+                                    <div >
+                                        <div >
+                                            <form >
+                                                <input placeholder="1" type="number" onchange= total() >
+                                            </form>
+                                            
+                                        </div>
+                                    </div>
+                                </td> -->
+                                <td class="total-price first-row"><%= cartInf.productPrice %>   </td>
+                                <td class="close-td first-row">
+                                    <form method="get" action="/cart/<%= cartInf.id %>">
+                                   <button type="submit"><i class="ti-close">
+                                   </form>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                        <% } %>
+                    </table>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 offset-lg-4">
+                        <div class="proceed-checkout">
+                            <ul>
+                                <li class="cart-total"><%= sum %> <span> </span></li>
+                            </ul>
+                            <a href="/payment" class="proceed-btn" >PROCEED TO CHECK OUT</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Shopping Cart Section End -->
+
+<%-include('./includes/footer') %>

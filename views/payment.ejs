@@ -1,0 +1,98 @@
+<%-include('./includes/header.ejs') %>
+<%-include('./includes/navbar.ejs') %>
+
+ <!-- Breadcrumb Section Begin -->
+ <div class="breacrumb-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb-text">
+                    <a href="#"><i class="fa fa-home"></i> Home</a>
+                    <a href="/cart"><span>Cart</span></a>
+                    <span>Payment</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breadcrumb Section Begin -->
+
+<div class="container" style="height: 60vh;">
+    <div class="card">
+        <div class="card-body">
+            <div class="title text-center">
+               <h2> Payment Method</h2> 
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mt-5  text-center col-sm-12" data-toggle="modal" data-target="#myModal" style="cursor: pointer;">
+                        <img src="img/icon-1.png" alt=""></br>
+                        Cash on Delivery ( COD )         
+                </div>
+                <div class="col-md-6 mt-4 text-center col-sm-12" data-toggle="modal" data-target="#myEsewa" style="cursor: pointer;">
+                    <img src="img/pngegg.png" height="60px" width="60px" alt=""></br>
+
+                    E-sewa
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"> Delivery Update !!</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="image text-center m-3">
+            <img src="img/success.png" height="60px" width="60px" alt="success">
+            </div>
+        <div class="paragraph-success text-center">
+            Your cart have been successfully added. Please contact us on:  <strong> +977982173217</strong> for further process.
+        </div>
+        <div class="support text-center mt-2">
+            <strong> Thank you for shopping with Us.</strong>
+
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="/shop" style="text-decoration: none;"> <button type="button" class="btn btn-danger">Shop More</button> </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="myEsewa">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title"> Delivery Update !!</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="image text-center m-3">
+              <img src="/img/qr code .jpg" height="100px" width="100px" alt="success">
+              </div>
+          <div class="paragraph-success text-center">
+              Scan Qrcode to pay. please contact on: <strong> +977982173217</strong> for further process.
+          </div>
+          <div class="support text-center mt-2">
+              <strong> Thank you for shopping with Us.</strong>
+  
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="/shop" style="text-decoration: none;"> <button type="button" class="btn btn-danger">Shop More</button> </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<%-include('./includes/footer.ejs') %>
+
+

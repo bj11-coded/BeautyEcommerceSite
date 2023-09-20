@@ -1,0 +1,97 @@
+  <!-- Header Section Begin -->
+  <body>
+  <header class="header-section">
+    <div class="header-top">
+        <div class="container">
+            <div class="ht-left">
+                <div class="mail-service">
+                    <i class=" fa fa-envelope"></i>
+                    Zuwacosmetics@gmail.com
+                </div>
+                <div class="phone-service">
+                    <i class=" fa fa-phone"></i>
+                    +977982173217
+                </div>
+            </div>
+            <div class="ht-right">
+                <!-- <a href="/logout" class="login-panel"><h3>logout</h3></a> -->
+                <div class="top-social">
+                    <a href="#"><i class="ti-facebook"></i></a>
+                    <a href="#"><i class="ti-twitter-alt"></i></a>
+                    <a href="#"><i class="ti-linkedin"></i></a>
+                    <a href="#"><i class="ti-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="inner-header">
+            <div class="row">
+                <div class="col-lg-2 col-md-2">
+                    <div class="logo">
+                        <a href="/">
+                            <img src='img/johoCosmatic (1).png' height="50px" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-7">
+                    <div class="advanced-search">
+                        <button type="button" class="category-btn">All Categories</button>
+                        <div class="input-group">
+                            <input type="text" placeholder="What do you need?">
+                            <button type="button"><i class="ti-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 text-right col-md-3">
+                    <ul class="nav-right">
+                        <li class="heart-icon">
+                            <a href="#">
+                                <i class="icon_heart_alt"></i>
+                                <!-- <span>1</span>s -->
+                            </a>
+                        </li>
+                        <li class="cart-icon">
+                            <a href="#">
+                                <i class="icon_bag_alt"></i>
+                                <!-- <span>3</span> -->
+                            </a>
+                            <div class="cart-hover">
+                                <div class="select-button">
+                                    <a href="/cart" class="primary-btn view-card">VIEW CARD</a>
+                                    <a href="#" class="primary-btn checkout-btn">CHECK OUT</a>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- <li class="cart-price">$150.00</li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nav-item">
+        <div class="container">
+            <nav class="nav-menu mobile-menu">
+                <ul>
+                    <li class="<%= path === '/' ? 'active' : '' %>"><a href="/">Home</a></li>
+                    <li class="<%= path === '/shop' ? 'active' : '' %>"><a  href="/shop">Shop</a></li>
+                    <li class="<%= path === '/about' ? 'active' : '' %>"><a href="/about"> About </a></li>
+                    <li class="<%= path === '/contact' ? 'active' : '' %>"><a href="/contact">Contact</a></li>
+                    <!-- <li><a href="./contact.html">shooping Cart</a></li> -->
+                    <!-- <li><a href="./register.html">Register</a></li> -->
+
+                   <% if( show == false ) { %>
+                    <li class="<%= path === '/login' ? 'active' : '' %>"><a href="/login">login</a></li> 
+                   <% }  else { %>
+                    <li class="<%= path === '/login' ? 'active' : '' %>"><a href="/logout">Logout</a></li>
+                   <% } %>
+                   <li class="<%= path === '/cart' ? 'active' : '' %>"><a href="/cart"> View Cart</a></li>
+                   
+
+                </ul>
+            </nav>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </div>
+</header>
+<!-- Header End --> 
